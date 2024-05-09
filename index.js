@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+// const port = 8080;
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const methodOverride = require("method-override");
@@ -33,9 +33,9 @@ app.get("/", (req, res) => {
     res.redirect("/posts");
 });
 
-app.listen(port, (req, res) => {
-    console.log("Listening on port 8080");
-});
+// app.listen(port, (req, res) => {
+//     console.log("Listening on port 8080");
+// });
 
 app.get("/posts", (req, res) => {
     res.render("index.ejs", ({ posts }));
