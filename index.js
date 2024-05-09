@@ -33,9 +33,9 @@ app.get("/", (req, res) => {
     res.redirect("/posts");
 });
 
-// app.listen(port, (req, res) => {
-//     console.log("Listening on port 8080");
-// });
+app.listen(port, (req, res) => {
+    console.log("Listening on port 8080");
+});
 
 app.get("/posts", (req, res) => {
     res.render("index.ejs", ({ posts }));
